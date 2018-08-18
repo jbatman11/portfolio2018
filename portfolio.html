@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel = "stylesheet" href = "portfolio-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+<body>
+  <h1> Julianna Bolivar </h1>
+  <h2> The portfolio of an aspiring animator! </h2>
+  <h3> Click on images to expand them. </h3>
+
+
+  <img class="myImg" src="shell.jpg" alt="Shell, 2018" style="width:500;max-width: 500px">
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+
+  <p>
+  Shell, 2018
+  </p>
+
+  <p>
+  <img class="myImg" src = "flowers.png" width="400" alt="Canterbury Bell Flowers, 2018" >
+  </p>
+
+  <p>
+  Canterbury Bell Flowers, 2018
+  </p>
+
+  <p>
+  <img class="myImg" src = "petey.png" width="400" alt="Cuban Pete, 2018">
+  </p>
+
+  <p>
+  Cuban Pete, 2018
+  </p>
+
+  <p>
+  <img class="myImg" src = "grapefruitcookie.png" width="500" alt="Grapefruit Cookie (Cookie Run), 2018">
+  </p>
+
+  <p>
+  Grapefruit Cookie (Cookie Run), 2018
+  </p>
+
+  <p>
+  <img class="myImg" src = "jmtheatre.png" width="550" alt="Movie Date, 2018">
+  </p>
+
+  <p>
+  Movie Date, 2018
+  </p>
+
+  <p>
+  <img class="myImg" src = "snowbaz.jpg" width="550" alt="Simon and Baz, 2016">
+  </p>
+
+  <p>
+  Simon and Baz, 2016
+  </p>
+
+  <p>
+  <img class="myImg" src = "hunksky.png" width="550" alt="Voltron Sky, 2016">
+  </p>
+
+  <p>
+  Voltron Sky, 2016
+  </p>
+
+  <footer>
+  <i class="fa fa-smile-o" style="font-size:75px;color:#1A659E";></i>
+  <i class="fa fa-link" style="font-size:75px;color:#1A659E"></i>
+  <i class="fa fa-comments-o" style="font-size:75px;color:#1A659E"></i>
+  </footer>
+
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  //Get the image and insert it inside the modal - use its "alt" //text as a caption
+  var img = document.getElementsByClassName('myImg');
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+
+  var showModal = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+  }
+
+  for (var i = 0; i < img.length; i++) {
+      img[i].addEventListener('click', showModal);
+  }
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+}
+  </script>
+</body>
+</html>
